@@ -10,7 +10,9 @@ import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 import androidx.fragment.app.Fragment;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import edu.uuerp.databinding.FragmentErpBinding;
 import java.util.zip.Inflater;
 
@@ -19,6 +21,7 @@ public class ERPFragment extends Fragment {
     private FragmentErpBinding FragmentERPView;
     private WebView webView;
     private ProgressBar progressBar;
+    private SwipeRefreshLayout swipeRefresh;
 
     @Override
     public android.view.View onCreateView(
@@ -26,10 +29,15 @@ public class ERPFragment extends Fragment {
         FragmentERPView = FragmentErpBinding.inflate(inflater, container, false);
         webView = FragmentERPView.webView;
         progressBar = FragmentERPView.progressBar;
+        swipeRefresh = FragmentERPView.swipeRefreshView;
+        
+        swipeRefresh.setOnRefreshListener(()->{
+            webView.reload();
+        });
 
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setDomStorageEnabled(true);
-        
+
         webView.setWebViewClient(
                 new WebViewClient() {
                     boolean loadingFinished = true, redirect = false;
@@ -58,6 +66,7 @@ public class ERPFragment extends Fragment {
                         if (!redirect) {
                             loadingFinished = true;
                             progressBar.setVisibility(View.GONE);
+                            swipeRefresh.setRefreshing(false);
                         } else {
                             redirect = false;
                         }
@@ -68,7 +77,6 @@ public class ERPFragment extends Fragment {
                 new WebChromeClient() {
                     @Override
                     public void onProgressChanged(WebView view, int progress) {
-                        progress = progress * 100;
                         progressBar.setProgress(progress);
                     }
                 });

@@ -2,17 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/nav_erp"
+        android:id="@+id/navigation_erp"
         android:icon="@drawable/ic_erp_48dp"
         android:title="@string/title_erp" />
 
     <item
-        android:id="@+id/nav_faculty_list"
+        android:id="@+id/navigation_faculty_list"
         android:icon="@drawable/ic_faculty_48dp"
         android:title="@string/title_faculty_list" />
 
     <item
-        android:id="@+id/nav_about"
+        android:id="@+id/navigation_about"
         android:icon="@drawable/ic_more_horiz_48dp"
         android:title="@string/title_about" />
 

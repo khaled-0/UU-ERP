@@ -1,28 +1,23 @@
 package edu.uuerp;
 
-import android.view.MenuItem;
-import androidx.fragment.app.FragmentContainer;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentContainerView;
-import androidx.fragment.app.FragmentTransaction;
+import androidx.fragment.app.FragmentActivity;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
+import androidx.viewpager2.widget.ViewPager2;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationView;
 import com.itsaky.androidide.logsender.LogSender;
 
-import edu.uuerp.ERPFragment;
 import edu.uuerp.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding ActivityMainView;
     private BottomNavigationView bottomNav;
-    private FragmentContainerView fragmentContainer;
-
-    private int startingPosition = 0;
+    private ViewPager2 viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,48 +27,56 @@ public class MainActivity extends AppCompatActivity {
 
         ActivityMainView = ActivityMainBinding.inflate(getLayoutInflater());
         bottomNav = ActivityMainView.bottomNavBar;
-        fragmentContainer = ActivityMainView.fragmentContainer;
+        viewPager = ActivityMainView.viewPager;
         setContentView(ActivityMainView.getRoot());
+
+        viewPager.setAdapter(new ViewPagerAdapter(this));
+        viewPager.setUserInputEnabled(false);
 
         bottomNav.setOnItemSelectedListener(
                 (menuItem) -> {
-                    Fragment fragment = null;
-                    int newPosition = 0;
-
                     switch (menuItem.getItemId()) {
-                        case R.id.nav_erp:
-                            fragment = new ERPFragment();
-                            newPosition = 0;
+                        case R.id.navigation_erp:
+                            viewPager.setCurrentItem(0, false);
                             break;
-                        case R.id.nav_faculty_list:
-                            fragment = new FacultyListFragment();
-                            newPosition = 1;
+
+                        case R.id.navigation_faculty_list:
+                            viewPager.setCurrentItem(1, false);
                             break;
-                        case R.id.nav_about:
-                            fragment = new AboutFragment();
-                            newPosition = 2;
+
+                        case R.id.navigation_about:
+                            viewPager.setCurrentItem(2, false);
                             break;
                     }
-                    if (startingPosition == newPosition) return true;
-                    return loadFragment(fragment, newPosition);
+                    return true;
                 });
     }
 
-    private boolean loadFragment(Fragment newFragment, int newPosition) {
-        if (newFragment == null) return false;
+    private static class ViewPagerAdapter extends FragmentStateAdapter {
 
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        public ViewPagerAdapter(FragmentActivity fa) {
+            super(fa);
+        }
 
-        // TODO: Do something about the jancky animation.
-        if (startingPosition > newPosition)
-            transaction.setCustomAnimations(R.anim.slide_in_left, R.anim.slide_out_right);
-        else if (startingPosition < newPosition)
-            transaction.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left);
+        @Override
+        public Fragment createFragment(int position) {
+            switch (position) {
+                case 0:
+                    return new ERPFragment();
+                case 1:
+                    return new FacultyListFragment();
 
-        transaction.replace(fragmentContainer.getId(), newFragment);
-        transaction.commit();
+                case 2:
+                    return new AboutFragment();
 
-        startingPosition = newPosition;
-        return true;
+                default:
+                    return new Fragment();
+            }
+        }
+
+        @Override
+        public int getItemCount() {
+            return 3;
+        }
     }
 }

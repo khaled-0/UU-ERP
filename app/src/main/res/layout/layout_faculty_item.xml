@@ -6,37 +6,59 @@
     android:layout_height="wrap_content"
     android:padding="8dp"
     android:layout_margin="4dp"
-    android:elevation="2dp"
-    android:background="@drawable/rounded_rect">
+    android:elevation="0dp"
+>
 
     <ImageView
         android:clickable="false"
         android:id="@+id/profilePic"
         android:layout_height="78dp"
         android:layout_width="78dp"
+        android:paddingEnd="8dp"
         android:layout_marginEnd="4dp"
         android:scaleType="centerInside"
-        android:src="@drawable/ic_smile_face_48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
     />
+
 
     <TextView
         android:clickable="false"
         android:id="@+id/fullName"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:text="A very long name"
         android:textSize="18sp"
+        android:layout_marginTop="4dp"
         app:layout_constraintStart_toEndOf="@id/profilePic"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+    />
 
 
     <TextView
         android:clickable="false"
+        android:id="@+id/titleOptional"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/profilePic"
+        app:layout_constraintTop_toBottomOf="@id/fullName"
+    />
+
+
+    <TextView
+        android:clickable="false"
+        android:id="@+id/primaryPhone"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/profilePic"
+        app:layout_constraintTop_toBottomOf="@id/titleOptional"
+    />
+
+    <TextView
+        android:clickable="false"
         android:id="@+id/codeName"
-        android:text="XYZ"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:textStyle="bold"
@@ -48,27 +70,6 @@
         app:layout_constraintTop_toTopOf="parent"
     />
 
-
-    <TextView
-        android:clickable="false"
-        android:id="@+id/titleOptional"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="Optional title"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@id/profilePic"
-        app:layout_constraintTop_toBottomOf="@id/fullName" />
-
-
-    <TextView
-        android:clickable="false"
-        android:id="@+id/primaryPhone"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="+8801XXXXXXXXX"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@id/profilePic"
-        app:layout_constraintTop_toBottomOf="@id/titleOptional" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/callPrimaryButton"

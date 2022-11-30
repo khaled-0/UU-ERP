@@ -10,5 +10,6 @@
         android:text="Khaled\nTODO: Add proper about page."
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:gravity="center" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
