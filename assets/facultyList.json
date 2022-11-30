@@ -2,7 +2,7 @@
     "fullName": "Test Faculty Item",
     "profilePicUrl": "https://avatars.githubusercontent.com/u/5637479",
     "codeName": "TFI",
-    "phoneNumbers": ["01900000000","017700000000"],
+    "phoneNumbers": "01900000000,017700000000",
     "title": "Tester",
     "socials": ""
 },
@@ -10,7 +10,7 @@
         "fullName": "Test Faculty Item 2",
         "profilePicUrl": "https://avatars.githubusercontent.com/u/5637477",
         "codeName": "TFI2",
-        "phoneNumbers": ["+88019088800","01766000000"],
+        "phoneNumbers": "+88019088800,01766000000",
         "title": "",
-        "socials": ["https://facebook.com"]
+        "socials": "https://facebook.com"
     }]
