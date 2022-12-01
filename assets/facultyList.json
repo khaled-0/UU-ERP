@@ -1,16 +1,350 @@
 [{
-    "fullName": "Test Faculty Item",
-    "profilePicUrl": "https://avatars.githubusercontent.com/u/5637479",
-    "codeName": "TFI",
-    "phoneNumbers": "01900000000,017700000000",
-    "title": "Tester",
-    "socials": ""
+    "fullName":"Dr. A.H.M. Saifullah Sadi",
+    "profilePicUrl": "",
+    "dept":"cse",
+    "codeName":"DSS",
+    "title":"Associate Professor And Chairman",
+    "phoneNumbers":"+8801795379956",
+    "email":"saifullah.cse@uttarauniversity.edu.bd",
+    "socials":"https://facebook.com/saifullah.sadi"
 },
     {
-        "fullName": "Test Faculty Item 2",
-        "profilePicUrl": "https://avatars.githubusercontent.com/u/5637477",
-        "codeName": "TFI2",
-        "phoneNumbers": "+88019088800,01766000000",
-        "title": "",
-        "socials": "https://facebook.com"
+        "fullName":"Md. Shafiul Alam Chowdhury",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"SAC",
+        "title":"Associate Professor",
+        "phoneNumbers":"+8801712167639",
+        "email":"shafiul.cse@uttarauniversity.edu.bd",
+        "socials":""
+    },
+    {
+        "fullName":"Md. Torikur Rahman",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"MTR",
+        "title":"Assistant Professor And Coordinator",
+        "phoneNumbers":"+8801755324911",
+        "email":"torikurrahman@uttarauniversity.edu.bd",
+        "socials":"https://facebook.com/torikur.rahman"
+    },
+    {
+        "fullName":"Uttam Kumar Dey",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"UKD",
+        "title":"Assistant Professor And Coordinator",
+        "phoneNumbers":"+8801685055737",
+        "email":"uttam@uttarauniversity.edu.bd",
+        "socials":"https://www.facebook.com/uttam.k.dey.9"
+    },
+    {
+        "fullName":"Md. Belal Hossen",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"MBH",
+        "title":"Assistant Professor And Coordinator",
+        "phoneNumbers":"+8801674397576",
+        "email":"belal.cse@uttarauniversity.edu.bd",
+        "socials":"https://facebook.com/belal.hossen.50552"
+    },
+    {
+        "fullName":"Md. Chowdhury Sajadul Islam",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"CSI",
+        "title":"Assistant Professor",
+        "phoneNumbers":"+8801684859574",
+        "email":"sajadul.cse@uttarauniversity.edu.bd",
+        "socials":""
+    },
+    {
+        "fullName":"Tanzillah Wahid",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"TZW",
+        "title":"Assistant Professor",
+        "phoneNumbers":"+8801740257702",
+        "email":"tanzillah@uttarauniversity.edu.bd",
+        "socials":"https://www.facebook.com/tanzillah.wahid"
+    },
+    {
+        "fullName":"Md. Amanat Ullah",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"AMU",
+        "title":"Assistant Professor",
+        "phoneNumbers":"+8801911981681",
+        "email":"amanat.cse@uttarauniversity.edu.bd",
+        "socials":"https://www.facebook.com/amanat.ullah.925"
+    },
+    {
+        "fullName":"Riasaad Haque Aneek",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"RHA",
+        "title":"Senior Lecturer",
+        "phoneNumbers":"+8801921462466",
+        "email":"aneek.cse@uttarauniversity.edu.bd",
+        "socials":"https://facebook.com/phenomenal.aneek"
+    },
+    {
+        "fullName":"Shamima Nasrin",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"SNA",
+        "title":"Senior Lecturer",
+        "phoneNumbers":"+8801815175080",
+        "email":"shamim.nasrin@uttarauniversity.edu.bd",
+        "socials":"https://www.facebook.com/shamima.tumpa.5"
+    },
+    {
+        "fullName":"Ratul Sikder",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"RTS",
+        "title":"Senior Lecturer",
+        "phoneNumbers":"+8801718920402",
+        "email":"ratulsikder@uttarauniversity.edu.bd",
+        "socials":"https://facebook.com/Ratulz"
+    },
+    {
+        "fullName":"Mohammad Alauddin",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"ALD",
+        "title":"Lecturer",
+        "phoneNumbers":"+8801792-205760",
+        "email":"md.alauddin@uttarauniversity.edu.bd",
+        "socials":"https://www.facebook.com/sorwer"
+    },
+    {
+        "fullName":"Mehrab Mustafy Rahman",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"MMR",
+        "title":"Lecturer",
+        "phoneNumbers":"+8801993037799",
+        "email":"mehrabmustafy@uttarauniversity.edu.bd",
+        "socials":"https://www.facebook.com/mehrabmustafy.rahman"
+    },
+    {
+        "fullName":"Israt Zarin",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"IZA",
+        "title":"Lecturer",
+        "phoneNumbers":"+8801882130161",
+        "email":"isratzarin@uttarauniversity.edu.bd",
+        "socials":"https://www.facebook.com/israt.zarin.islam"
+    },
+    {
+        "fullName":"Nasim Ahmed",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"NAD",
+        "title":"Lecturer",
+        "phoneNumbers":"nasimahmed@uttarauniversity.edu.bd",
+        "email":"+8801796759192",
+        "socials":"https://www.facebook.com/nasim1121ahmed"
+    },
+    {
+        "fullName":"Md. Zubair",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"MZH",
+        "title":"Lecturer",
+        "phoneNumbers":"'+8801766722703",
+        "email":"md.zubair@uttarauniversity.edu.bd",
+        "socials":"https://www.facebook.com/zubair063"
+    },
+    {
+        "fullName":"Shafat Rashid",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"SFR",
+        "title":"Lecturer",
+        "phoneNumbers":"+8801781188735",
+        "email":"shafatrashid@uttarauniversity.edu.bd",
+        "socials":""
+    },
+    {
+        "fullName":"Md. Ferdous",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"MFR",
+        "title":"Lecturer",
+        "phoneNumbers":"+8801721250385",
+        "email":"md.ferdous@uttarauniversity.edu.bd",
+        "socials":""
+    },
+    {
+        "fullName":"Md. Wahidur Rahman",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"MWR",
+        "title":"Lecturer",
+        "phoneNumbers":"+8801779208267",
+        "email":"mwrahman@uttarauniversity.edu.bd",
+        "socials":""
+    },
+    {
+        "fullName":"Md. Harun-Ar-Rashid",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"HAR",
+        "title":"Lecturer",
+        "phoneNumbers":"",
+        "email":"harashid@uttarauniversity.edu.bd",
+        "socials":""
+    },
+    {
+        "fullName":"Saifur Rahman Shatil",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"SRS",
+        "title":"Lecturer",
+        "phoneNumbers":"+8801400180503",
+        "email":"saifurrahmanshatil@uttarauniversity.edu.bd",
+        "socials":""
+    },
+    {
+        "fullName":"Noor Easrib Tiba",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"NET",
+        "title":"Lecturer",
+        "phoneNumbers":"",
+        "email":"nooreasribtiba@uttarauniversity.edu.bd",
+        "socials":""
+    },
+    {
+        "fullName":"Asif Khan Pathan",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"AKP",
+        "title":"Lecturer",
+        "phoneNumbers":"01799-552307",
+        "email":"asifkhanpathan@uttarauniversity.edu.bd",
+        "socials":""
+    },
+    {
+        "fullName":"Jubayer Ahmed Bhuiyan Shawon",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"JAB",
+        "title":"Lecturer",
+        "phoneNumbers":"+8801972947048",
+        "email":"jabshawon@uttarauniversity.edu.bd",
+        "socials":""
+    },
+    {
+        "fullName":"Md. Ashaduzzaman Niloy",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"MAN",
+        "title":"Lecturer",
+        "phoneNumbers":"+8801521433509",
+        "email":"niloy.eee@uttarauniversity.edu.bd",
+        "socials":""
+    },
+    {
+        "fullName":"Samia Yasmin",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"SMY",
+        "title":"Lecturer",
+        "phoneNumbers":"+8801911538983",
+        "email":"samia.cse@uttarauniversity.edu.bd",
+        "socials":""
+    },
+    {
+        "fullName":"S.M. Rashidul Hasan Nijhum",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"",
+        "title":"Lecturer",
+        "phoneNumbers":"",
+        "email":"",
+        "socials":""
+    },
+    {
+        "fullName":"Md. Robiul Islam",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"MRI",
+        "title":"Lecturer",
+        "phoneNumbers":"+8801763347945",
+        "email":"robiul.cse@uttarauniversity.edu.bd",
+        "socials":""
+    },
+    {
+        "fullName":"Naznin Hossain Esha",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"NHE",
+        "title":"Lecturer",
+        "phoneNumbers":"+8801316400898",
+        "email":"Naznin.cse@uttarauniversity.edu.bd",
+        "socials":""
+    },
+    {
+        "fullName":"Md. Khademul Islam",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"MKI",
+        "title":"Lecturer",
+        "phoneNumbers":"",
+        "email":"",
+        "socials":""
+    },
+    {
+        "fullName":"MD.Abdul Bashir",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"MAB",
+        "title":"Lecturer",
+        "phoneNumbers":"+8801886065369",
+        "email":"md.abdulbashir@uattarauniversity.edu.bd",
+        "socials":""
+    },
+    {
+        "fullName":"MD.Monir Ahammod Bin Atique",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"MRA",
+        "title":"Lecturer",
+        "phoneNumbers":"+8801757128711",
+        "email":"atique.cse@uattarauniversity.edu.bd",
+        "socials":""
+    },
+    {
+        "fullName":"Rokeya Begum",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"ROB",
+        "title":"Lecturer",
+        "phoneNumbers":"+8801687861222",
+        "email":"rokeya.cse@uattarauniversity.edu.bd",
+        "socials":""
+    },
+    {
+        "fullName":"Nahida Islam",
+        "profilePicUrl": "",
+        "dept":"cse",
+        "codeName":"",
+        "title":"Lecturer",
+        "phoneNumbers":"+8801629770910",
+        "email":"nahida.cse@uattarauniversity.edu.bd",
+        "socials":""
+    },
+    {
+        "fullName":"Tanvir Anjum",
+        "profilePicUrl": "",
+        "dept":"eee",
+        "codeName":"TRA",
+        "title":"Lecturer(EEE)",
+        "phoneNumbers":"+8801798744430",
+        "email":"tanvir.cse@uattarauniversity.edu.bd",
+        "socials":""
     }]
