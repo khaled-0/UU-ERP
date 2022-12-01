@@ -22,8 +22,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Remove this line if you don't want AndroidIDE to show this app's logs
-        LogSender.startLogging(this);
 
         ActivityMainView = ActivityMainBinding.inflate(getLayoutInflater());
         bottomNav = ActivityMainView.bottomNavBar;
