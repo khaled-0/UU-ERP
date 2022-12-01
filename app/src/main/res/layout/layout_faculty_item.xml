@@ -9,14 +9,13 @@
     android:elevation="0dp"
 >
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:clickable="false"
         android:id="@+id/profilePic"
         android:layout_height="78dp"
         android:layout_width="78dp"
-        android:paddingEnd="8dp"
-        android:layout_marginEnd="4dp"
-        android:scaleType="centerInside"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/roundedImageView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -29,6 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:textSize="18sp"
+        android:paddingStart="8dp"
         android:layout_marginTop="4dp"
         app:layout_constraintStart_toEndOf="@id/profilePic"
         app:layout_constraintTop_toTopOf="parent"
@@ -41,6 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:textSize="14sp"
+        android:paddingStart="8dp"
         app:layout_constraintStart_toEndOf="@id/profilePic"
         app:layout_constraintTop_toBottomOf="@id/fullName"
     />
@@ -52,6 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:textSize="14sp"
+        android:paddingStart="8dp"
         app:layout_constraintStart_toEndOf="@id/profilePic"
         app:layout_constraintTop_toBottomOf="@id/titleOptional"
     />

@@ -39,6 +39,7 @@ public class FacultyListFragment extends Fragment {
     private SwipeRefreshLayout swipeRefresh;
 
     private FacultyListRecyclerAdapter facultyListAdapter;
+    private ArrayList<FacultyMember> facultyList = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle arg2) {
@@ -61,6 +62,28 @@ public class FacultyListFragment extends Fragment {
         swipeRefresh.setOnRefreshListener(
                 () -> {
                     loadFacultyMembersData(getContext());
+                });
+
+        searchView.setOnQueryTextListener(
+                new SearchView.OnQueryTextListener() {
+                    @Override
+                    public boolean onQueryTextSubmit(String query) {
+                        return false;
+                    }
+
+                    @Override
+                    public boolean onQueryTextChange(String newText) {
+                        if (newText.isEmpty()){
+                            facultyListAdapter.updateData(facultyList);
+                            return false;
+                        } 
+                        
+                        final ArrayList<FacultyMember> filteredFacultyList = new ArrayList<>();
+                        for (FacultyMember member : facultyList)
+                            if (member.matchesQuery(newText)) filteredFacultyList.add(member);
+                        facultyListAdapter.updateData(filteredFacultyList);
+                        return false;
+                    }
                 });
     }
 
@@ -99,7 +122,6 @@ public class FacultyListFragment extends Fragment {
 
     private void loadFacultyMembersData(Context context) {
         swipeRefresh.setRefreshing(true);
-        ArrayList<FacultyMember> facultyList = new ArrayList<>();
 
         new Thread(
                         () -> {

@@ -1,6 +1,7 @@
 package edu.uuerp;
 
 import java.io.Serializable;
+import java.util.Locale;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONException;
@@ -18,9 +19,19 @@ public class FacultyMember implements Serializable {
         profilePicUrl = json.getString("profilePicUrl");
         codeName = json.getString("codeName");
         title = json.getString("title");
-        
-        phoneNumbers= json.getString("phoneNumbers").split(",");
-        socials= json.getString("socials").split(",");
+
+        phoneNumbers = json.getString("phoneNumbers").split(",");
+        socials = json.getString("socials").split(",");
+    }
+
+    public boolean matchesQuery(String query) {
+        query = query.toLowerCase(Locale.ENGLISH);
+
+        if (fullName.toLowerCase().contains(query)) return true;
+        if (codeName.toLowerCase().contains(query)) return true;
+        if (title.toLowerCase().contains(query)) return true;
+
+        return false;
     }
 
     public String getFullName() {
@@ -34,23 +45,24 @@ public class FacultyMember implements Serializable {
     public String getCodeName() {
         return this.codeName;
     }
-    
-    public boolean hasTitle(){
-        return !(title==null || title.isEmpty());
+
+    public boolean hasTitle() {
+        return !(title == null || title.isEmpty());
     }
-    public String getTitle(){
+
+    public String getTitle() {
         return title;
     }
-    
-    public String getPrimaryNumber(){
+
+    public String getPrimaryNumber() {
         return phoneNumbers[0];
     }
-    
-    public String[] getPhoneNumbers(){
+
+    public String[] getPhoneNumbers() {
         return phoneNumbers;
     }
-    
-    public String[] getSocials(){
+
+    public String[] getSocials() {
         return socials;
     }
 }

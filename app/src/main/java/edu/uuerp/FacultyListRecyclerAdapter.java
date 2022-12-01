@@ -14,7 +14,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 import com.bumptech.glide.Glide;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.imageview.ShapeableImageView;
 import edu.uuerp.FacultyListRecyclerAdapter;
+import edu.uuerp.FacultyMember;
 import edu.uuerp.databinding.LayoutFacultyItemBinding;
 import java.util.ArrayList;
 
@@ -25,7 +27,14 @@ public class FacultyListRecyclerAdapter extends RecyclerView.Adapter {
 
     public FacultyListRecyclerAdapter(Context context, ArrayList<FacultyMember> facultyList) {
         this.context = context;
-        this.facultyList = facultyList;
+        this.facultyList = new ArrayList<>();
+        this.facultyList.addAll(facultyList);
+    }
+    
+    public void updateData(ArrayList<FacultyMember> newData){
+        facultyList.clear();
+        facultyList.addAll(newData);
+        notifyDataSetChanged();
     }
 
     @Override
@@ -73,7 +82,7 @@ public class FacultyListRecyclerAdapter extends RecyclerView.Adapter {
 
     private class FacultyItemViewHolder extends RecyclerView.ViewHolder {
 
-        ImageView profilePic;
+        ShapeableImageView profilePic;
         TextView fullName, codeName, titleOptional, primaryPhone;
         MaterialButton callPrimaryButton;
 
