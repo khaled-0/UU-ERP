@@ -61,6 +61,7 @@ public class FacultyListFragment extends Fragment {
         loadFacultyMembersData(getContext());
         swipeRefresh.setOnRefreshListener(
                 () -> {
+                    searchView.setIconified(true);
                     loadFacultyMembersData(getContext());
                 });
 
@@ -68,23 +69,25 @@ public class FacultyListFragment extends Fragment {
                 new SearchView.OnQueryTextListener() {
                     @Override
                     public boolean onQueryTextSubmit(String query) {
+                        filterFacultyData(query);
                         return false;
                     }
 
                     @Override
                     public boolean onQueryTextChange(String newText) {
-                        if (newText.isEmpty()){
-                            facultyListAdapter.updateData(facultyList);
-                            return false;
-                        } 
-                        
-                        final ArrayList<FacultyMember> filteredFacultyList = new ArrayList<>();
-                        for (FacultyMember member : facultyList)
-                            if (member.matchesQuery(newText)) filteredFacultyList.add(member);
-                        facultyListAdapter.updateData(filteredFacultyList);
+                        filterFacultyData(newText);
                         return false;
                     }
                 });
+    }
+
+    private void filterFacultyData(String additionalQuery) {
+        if (additionalQuery.isEmpty()) facultyListAdapter.updateData(facultyList);
+
+        final ArrayList<FacultyMember> filteredFacultyList = new ArrayList<>();
+        for (FacultyMember member : facultyList)
+            if (member.matchesQuery(additionalQuery)) filteredFacultyList.add(member);
+        facultyListAdapter.updateData(filteredFacultyList);
     }
 
     private void saveFacultyData(JSONArray jsonData, Context context) throws IOException {
@@ -143,6 +146,8 @@ public class FacultyListFragment extends Fragment {
 
                                 JSONArray facultyDataArray =
                                         new JSONArray(facultyDataResponse.body().string());
+
+                                facultyList.clear();
                                 for (int i = 0; i < facultyDataArray.length(); i++)
                                     facultyList.add(
                                             new FacultyMember(facultyDataArray.getJSONObject(i)));
