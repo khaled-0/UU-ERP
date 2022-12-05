@@ -144,8 +144,8 @@
         "dept":"cse",
         "codeName":"NAD",
         "title":"Lecturer",
-        "phoneNumbers":"nasimahmed@uttarauniversity.edu.bd",
-        "email":"+8801796759192",
+        "email":"nasimahmed@uttarauniversity.edu.bd",
+        "phoneNumbers":"+8801796759192",
         "socials":"https://www.facebook.com/nasim1121ahmed"
     },
     {
@@ -154,7 +154,7 @@
         "dept":"cse",
         "codeName":"MZH",
         "title":"Lecturer",
-        "phoneNumbers":"'+8801766722703",
+        "phoneNumbers":"+8801766722703",
         "email":"md.zubair@uttarauniversity.edu.bd",
         "socials":"https://www.facebook.com/zubair063"
     },

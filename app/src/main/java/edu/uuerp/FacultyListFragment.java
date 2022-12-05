@@ -10,6 +10,7 @@ import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import edu.uuerp.FacultyListRecyclerAdapter;
 import edu.uuerp.FacultyMember;
 import edu.uuerp.databinding.FragmentFacultyListBinding;
 import java.io.BufferedInputStream;
@@ -45,6 +46,8 @@ public class FacultyListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle arg2) {
         FragmentFacultyListView = FragmentFacultyListBinding.inflate(inflater, container, false);
         facultyRecyclerView = FragmentFacultyListView.facultyRecyclerView;
+        facultyListAdapter = new FacultyListRecyclerAdapter(requireContext(),facultyList);
+        
         searchView =
                 (SearchView)
                         FragmentFacultyListView.toolBar
@@ -58,13 +61,10 @@ public class FacultyListFragment extends Fragment {
 
     @Override
     public void onViewCreated(View view, Bundle arg) {
+        facultyRecyclerView.setAdapter(facultyListAdapter);
         loadFacultyMembersData(getContext());
-        swipeRefresh.setOnRefreshListener(
-                () -> {
-                    searchView.setIconified(true);
-                    loadFacultyMembersData(getContext());
-                });
-
+        swipeRefresh.setOnRefreshListener(() -> loadFacultyMembersData(getContext()));
+        
         searchView.setOnQueryTextListener(
                 new SearchView.OnQueryTextListener() {
                     @Override
@@ -173,11 +173,7 @@ public class FacultyListFragment extends Fragment {
                                 requireActivity()
                                         .runOnUiThread(
                                                 () -> {
-                                                    facultyListAdapter =
-                                                            new FacultyListRecyclerAdapter(
-                                                                    getContext(), facultyList);
-                                                    facultyRecyclerView.setAdapter(
-                                                            facultyListAdapter);
+                                                    filterFacultyData(searchView.getQuery().toString());
                                                     swipeRefresh.setRefreshing(false);
                                                 });
                         })
